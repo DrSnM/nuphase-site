@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64">
+  <path d="M2,27 C 8,15 14,15 20,27 C 26,39 32,39 38,27" fill="none" stroke="#1670a8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M2,39 C 8,31 14,31 20,39 C 26,47 32,47 38,39" fill="none" stroke="#1670a8" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <text x="50" y="42" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-weight="600" font-size="34px"><tspan fill="#1a2233">Ground</tspan><tspan fill="#1670a8">swell</tspan></text>
+</svg>
