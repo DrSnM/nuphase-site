@@ -217,6 +217,13 @@ section.plain { width: 100%; padding: 64px 0; }
 #pubs-list.show-all .pub-item.pub-extra { display: flex; }
 .pub-controls { display: flex; gap: 20px; align-items: center; margin-top: 4px; flex-wrap: wrap; }
 
+.media-item { padding: 14px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; max-width: 720px; }
+.media-item .media-title { font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.5; text-decoration: none; }
+.media-item .media-title:hover { color: var(--accent); }
+.media-item .media-detail { font-size: 13px; color: var(--muted); }
+.media-item.media-extra { display: none; }
+#media-list.show-all .media-item.media-extra { display: flex; }
+
 /* Contact */
 .contact-panel { padding: 96px 0 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
 .contact-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
