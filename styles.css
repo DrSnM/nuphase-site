@@ -190,6 +190,8 @@ section.plain { width: 100%; padding: 64px 0; }
 }
 .tag-pill.live { background: #0e7d5c; color: #ffffff; }
 .tag-pill.in-progress { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
+.tag-pill.past { background: transparent; border: 1px solid var(--muted); color: var(--muted); }
+.work-subhead { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 8px 0 0; }
 .work-card img.logo { height: 36px; width: auto; display: block; }
 .work-card .tagline { margin: 0; font-size: 14px; font-style: italic; color: var(--muted); }
 .work-card p.desc { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
