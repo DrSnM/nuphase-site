@@ -80,7 +80,31 @@
       </div>
       <div class="card">
         <div class="card-label">Technical</div>
-        <p>Hands-on, method-level consulting in spectroscopy, chemometrics, data science, machine learning and experimental design, drawn from two decades practising these methods directly.</p>
+        <p>Hands-on modelling and experimental design: spectroscopy and chemometrics, rigorous ML validation (grouped cross-validation, leakage detection, calibration transfer), and applied statistics &mdash; built and shipped as real, field-validated production systems.</p>
+      </div>
+    </div>
+
+    <p class="work-subhead">Selected technical work</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-label">Contamination screening from spectra</div>
+        <p><strong>88&ndash;94% field-validated accuracy</strong> classifying petroleum contamination directly from infrared spectra, across three regulatory thresholds and 2,700+ independently lab-measured samples. Built for Ziltek's RemScan, running on real sites for Chevron, Kuwait Oil Company, and CONCAWE member companies.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Soil carbon at national scale</div>
+        <p>Modelled soil organic carbon from spectra across <strong>15,341 real, lab-referenced samples</strong> nationally (R&sup2;=0.85), externally validated on 350+ samples never seen in training. Taken through to real commercial deployment, including a soil-carbon monitoring program for Chevron and an ACCU Scheme-compliant sampling-strategy design.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Soil texture from a handheld scanner</div>
+        <p>Built a compositional-statistics model that treats sand/clay/silt as a single constrained composition, predicting soil texture directly from an infrared scan &mdash; developed in partnership with a commercial soil-testing laboratory: <strong>93&ndash;94% texture-class accuracy</strong> in the field.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Physical and statistical modelling beyond a spreadsheet</div>
+        <p>Building the physics and validation engine behind Groundswell (in active development): real wave physics, satellite imagery, and computer vision, tested against real ocean buoy networks through a custom reliability gate built to stop an unreplicated result from being trusted.</p>
+      </div>
+      <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-label">Validation discipline as the actual deliverable</div>
+        <p>Caught a model that looked strong under casual cross-validation (R&sup2;=0.65) collapse to R&sup2;=-2.8 under a properly rigorous, leakage-safe check, then root-caused it to exactly how the physical soil samples were being repacked between scans. Reporting that a model doesn't work yet, and exactly why, is the same discipline that makes the ones that ship trustworthy.</p>
       </div>
     </div>
   </div>
