@@ -118,8 +118,11 @@
         <span class="tag-pill live">Live product</span>
         <img class="logo" src="assets/groundwork-logo.svg" alt="Groundwork">
         <p class="tagline">Know your number before you negotiate.</p>
-        <p class="desc">Salary benchmarks built entirely from real U.S. government wage data: DOL filings and BLS survey data.</p>
-        <a href="https://groundworkpay.com" class="link" style="font-size: 14px; margin-top: 8px;">groundworkpay.com &nearr;</a>
+        <p class="desc">Public pay and employer records, state layoff notices and relocation context, built from U.S. government sources, for anyone weighing a job, a move or a layoff notice.</p>
+        <div class="card-links">
+          <a href="https://groundworkpay.com" class="link">groundworkpay.com &nearr;</a>
+          <a href="#groundwork-case-study" class="link">How I built it &darr;</a>
+        </div>
       </div>
       <div class="card work-card">
         <span class="tag-pill in-progress">In progress</span>
@@ -128,6 +131,37 @@
         <p class="desc">Surf forecasts for any GPS point on Earth, built from open wave and satellite data and sharpened with machine learning trained on real surf-cam footage.</p>
       </div>
     </div>
+
+    <article id="groundwork-case-study" class="case-study" aria-labelledby="gw-case-title">
+      <div class="card-label">Case study</div>
+      <h3 id="gw-case-title">Groundwork: from a question to a live product</h3>
+      <div class="case-body">
+        <p class="case-lead">I built Groundwork to make public wage and employer records useful when someone is weighing a job, a move or a layoff notice. I lead the product decisions and use Codex and Claude Code to turn them into scoped work, build in parallel where it makes sense, and review changes independently.</p>
+        <p>Early interest in the layoff pages informed the direction. It was a small sample of search traffic, enough to tell me where to look next and too small to say anything about demand.</p>
+      </div>
+
+      <h4>Each tool reviews the other&rsquo;s work</h4>
+      <div class="review-grid">
+        <div class="review">
+          <h5>Claude on the first layoff article</h5>
+          <p>Claude spotted that a line about Groundwork&rsquo;s saved copy could sound like it contradicted a notice visible on the state website. The published article now states what was checked and what the result means.</p>
+          <a href="https://groundworkpay.com/insights/comcast-layoff-notices-pennsylvania-washington" class="link">Read the article &nearr;</a>
+        </div>
+        <div class="review">
+          <h5>Codex on the article-update tool</h5>
+          <p>Claude built the first version. Codex caught two proposed updates that could try to overwrite the same working draft, and a final write failure that could leave changed inputs behind. That led to a recovery and concurrency review. It was caught during development, and gave me concrete failures to test before the workflow was put into use.</p>
+        </div>
+      </div>
+
+      <h4>Three things I take into any project</h4>
+      <ol class="principles">
+        <li><strong>Define what done means.</strong> Write down the goal, what stays the same and how the result will be checked before anyone starts. A clear brief makes it easier to build and much easier to review.</li>
+        <li><strong>Ask what could break.</strong> Give the reviewer the change, the original requirements and the evidence, and ask for a case that would prove the change wrong.</li>
+        <li><strong>Keep the decisions with you.</strong> The tools help me see more options and check more cases. I decide what is worth building, what the evidence supports and when it is ready to ship.</li>
+      </ol>
+
+      <p class="case-close">I&rsquo;m open to full-time roles and consulting on data products, internal tools and technical work that needs to reach real users. <a href="#contact" class="link">Get in touch &rarr;</a></p>
+    </article>
 
     <p class="work-subhead">Selected past work</p>
     <div class="card-grid">
