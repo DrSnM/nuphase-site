@@ -273,20 +273,21 @@
     <div class="about-block">
       <h3>Where I've worked</h3>
       <p>Delivering, commissioning, and meeting customers and partners in person.</p>
+      <figure class="wmap" id="worked-map" aria-hidden="true" hidden></figure>
       <div class="place-grid">
-        <div><div class="country">China</div><div class="cities">Shanghai, Ningbo, Hangzhou, Beijing, Nanjing, Chengdu</div></div>
-        <div><div class="country">United States</div><div class="cities">Houston, San Francisco, Denver</div></div>
-        <div><div class="country">Indonesia</div><div class="cities">Jakarta, Pekanbaru</div></div>
-        <div><div class="country">United Arab Emirates</div><div class="cities">Dubai, Sharjah</div></div>
-        <div><div class="country">France</div><div class="cities">La Tour-du-Pin</div></div>
-        <div><div class="country">Nigeria</div><div class="cities">Port Harcourt</div></div>
-        <div><div class="country">Malaysia</div><div class="cities">Kuala Lumpur</div></div>
-        <div><div class="country">Canada</div><div class="cities">Vancouver</div></div>
-        <div><div class="country">Germany</div><div class="cities">Erlangen</div></div>
-        <div><div class="country">Sweden</div><div class="cities">Stockholm</div></div>
-        <div><div class="country">Kuwait</div><div class="cities">Kuwait City</div></div>
+        <div data-c="china"><div class="country">China</div><div class="cities">Shanghai, Ningbo, Hangzhou, Beijing, Nanjing, Chengdu</div></div>
+        <div data-c="united-states"><div class="country">United States</div><div class="cities">Houston, San Francisco, Denver</div></div>
+        <div data-c="indonesia"><div class="country">Indonesia</div><div class="cities">Jakarta, Pekanbaru</div></div>
+        <div data-c="united-arab-emirates"><div class="country">United Arab Emirates</div><div class="cities">Dubai, Sharjah</div></div>
+        <div data-c="france"><div class="country">France</div><div class="cities">La Tour-du-Pin</div></div>
+        <div data-c="nigeria"><div class="country">Nigeria</div><div class="cities">Port Harcourt</div></div>
+        <div data-c="malaysia"><div class="country">Malaysia</div><div class="cities">Kuala Lumpur</div></div>
+        <div data-c="canada"><div class="country">Canada</div><div class="cities">Vancouver</div></div>
+        <div data-c="germany"><div class="country">Germany</div><div class="cities">Erlangen</div></div>
+        <div data-c="sweden"><div class="country">Sweden</div><div class="cities">Stockholm</div></div>
+        <div data-c="kuwait"><div class="country">Kuwait</div><div class="cities">Kuwait City</div></div>
       </div>
-      <p class="place-note">Plus nationwide work across Australia, from state capitals to rural regional centres.</p>
+      <p class="place-note" data-c="australia">Plus nationwide work across Australia, from state capitals to rural regional centres.</p>
     </div>
 
     <div class="about-block">
@@ -445,6 +446,7 @@
   </div>
 </section>
 
+<script src="assets/worldmap.js" defer></script>
 <script src="script.js"></script>
 </body>
 </html>
