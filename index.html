@@ -61,78 +61,96 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wordmark">Nuphase</div>
-  <nav class="site-nav">
-    <a class="link" href="#consulting">Consulting</a>
-    <a class="link" href="/ai-workflow-review/">AI review</a>
-    <a class="link" href="#work">Work</a>
-    <a class="link" href="#about">About</a>
-    <a class="link" href="#contact">Contact</a>
-  </nav>
+<header class="mast">
+  <div class="wrap">
+    <div class="logo">Nuphase</div>
+    <div class="tagline">Deep-tech commercialisation &middot; Venture leadership &middot; Technical consulting</div>
+    <div class="where">Adelaide, South Australia</div>
+  </div>
 </header>
+<nav class="contents" aria-label="Sections">
+  <div class="wrap">
+    <a href="#consulting"><span>i.</span>Consulting</a>
+    <a href="/ai-workflow-review/"><span>ii.</span>AI review</a>
+    <a href="#work"><span>iii.</span>Work</a>
+    <a href="#about"><span>iv.</span>About</a>
+    <a href="#contact"><span>v.</span>Contact</a>
+    <div class="sp"></div>
+    <div class="live"><i></i>Open to roles and consulting</div>
+  </div>
+</nav>
 
-<div class="hero-band">
-  <div class="wrap hero">
-    <div class="hero-text">
-      <div class="eyebrow">Deep-tech commercialisation &middot; Venture leadership &middot; Technical consulting</div>
-      <h1>I take research out of the lab and turn it into products that ship.</h1>
-      <p class="hero-sub">As the inventor, the spin-out founder, the licensor, and the executive running a business built on licensed technology. PhD in experimental physics, twenty years moving between the technical work and the commercial calls that sit on top of it.</p>
+<section class="hero-home">
+  <canvas id="vf" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <div class="kicker">Sean Manning &middot; PhD, experimental physics</div>
+      <h1>I take research out of the lab and turn it into products that <em>ship.</em></h1>
+      <div class="intro">
+        <p>The inventor, the spin-out founder, the licensor, and the executive running a business built on licensed technology.</p>
+        <p>Twenty years moving between the technical work and the commercial calls that sit on top of it.</p>
+      </div>
       <div class="cta-row">
         <a href="#work" class="btn-primary">See the work</a>
         <a href="https://www.linkedin.com/in/sean-manning-827510138/" class="link">Connect on LinkedIn &rarr;</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <div class="disc"></div>
+    <aside class="portrait">
       <img src="assets/headshot.jpg" alt="Sean Manning">
-    </div>
+      <div class="cap"><span>Sean Manning</span><span>Adelaide</span></div>
+      <blockquote>&ldquo;A company called Sensability have been developing sensors and algorithms for years and helped with Breville&rsquo;s Eye Q Optic Sensors.&rdquo;
+        <small>Tom Groundes-Peace, Senior Global Category Manager &amp; Head of Research, Breville, <a href="https://www.theaureview.com/technology/breville-eye-q-toaster-interview-sensors-insights-technology/" class="link">interviewed in The AU Review</a></small></blockquote>
+    </aside>
   </div>
+</section>
+
+<div class="band achv" id="achv" role="region" aria-label="Selected results">
+  <div class="wrap">
+    <div class="achv-top">
+      <span class="achv-k">Selected results</span>
+      <span class="achv-count"><b id="ac-i">01</b> / <span id="ac-n">09</span></span>
+    </div>
+    <div class="achv-slide" id="slide">
+      <div class="achv-fig" id="af">88&ndash;94%</div>
+      <div class="achv-text"><p id="at">Field-validated accuracy classifying petroleum contamination from infrared spectra.</p><small id="as">Across three regulatory thresholds and 2,700+ lab-measured samples, for Chevron and Kuwait Oil Company.</small></div>
+    </div>
+    <div class="achv-pips" id="pips"></div>
+  </div>
+  <div class="achv-bar"><i id="bar"></i></div>
 </div>
 
-<div class="proof-band">
-  <div class="wrap proof-inner">
-    <div class="proof-lines">
-      <p>Granted patents behind Sensability&trade; Technology, now in Breville's Eye Q toaster range.</p>
-      <p>A university research spin-out taken through to commercialisation.</p>
-      <p>Led a business through acquisition, keeping its customers and technology intact.</p>
-    </div>
-    <div class="quote-block">
-      <blockquote>&ldquo;A company called Sensability have been developing sensors and algorithms for years and helped with Breville's Eye Q Optic Sensors.&rdquo;</blockquote>
-      <p class="attribution">Tom Groundes-Peace, Senior Global Category Manager &amp; Head of Research, Breville &mdash; <a href="https://www.theaureview.com/technology/breville-eye-q-toaster-interview-sensors-insights-technology/" class="link">interviewed in The AU Review</a></p>
-      <p class="own-claim">I co-founded Sensability in 2011, alongside two colleagues from the University of Adelaide.</p>
-    </div>
+<section id="consulting" class="index">
+  <div class="wrap">
+    <h2>Ways to work together</h2>
+    <a class="row" href="#contact">
+      <div class="n">i.</div>
+      <h3>Strategic</h3>
+      <p>Startups, deep tech, commercialisation. Venture building, technology transfer, taking research to market, and the judgement calls that come with running a deep-tech company.</p>
+      <div class="go">Talk it through &rarr;</div>
+    </a>
+    <a class="row" href="#contact">
+      <div class="n">ii.</div>
+      <h3>Technical</h3>
+      <p>Hands-on modelling and experimental design: spectroscopy and chemometrics, rigorous ML validation (grouped cross-validation, leakage detection, calibration transfer), and applied statistics &mdash; built and shipped as real, field-validated production systems.</p>
+      <div class="go">Talk it through &rarr;</div>
+    </a>
+    <a class="row ai" href="/ai-workflow-review/">
+      <div class="n">iii.</div>
+      <h3>AI workflow review<br><span class="badge">Fixed price</span></h3>
+      <p>For small and medium businesses in Adelaide, South Australia and across Australia. I map how the work gets done and write a plan for where AI will and won&rsquo;t help, with one pilot to try first.</p>
+      <div class="go">How it works &rarr;</div>
+    </a>
   </div>
-</div>
+</section>
 
-<section id="consulting" class="panel">
+<section id="technical-work" class="plain">
   <div class="wrap section-stack">
-    <h2>Consulting</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-label">Strategic</div>
-        <p>Startups, deep tech, commercialisation. Venture building, technology transfer, taking research to market, and the judgement calls that come with running a deep-tech company.</p>
-      </div>
-      <div class="card">
-        <div class="card-label">Technical</div>
-        <p>Hands-on modelling and experimental design: spectroscopy and chemometrics, rigorous ML validation (grouped cross-validation, leakage detection, calibration transfer), and applied statistics &mdash; built and shipped as real, field-validated production systems.</p>
-      </div>
-    </div>
-
-    <div class="card-grid" style="margin-top: 0;">
-      <div class="card card-wide">
-        <div class="card-label">AI workflow review for small business</div>
-        <p>For small and medium businesses in Adelaide, South Australia and across Australia. I map how the work gets done and write a plan for where AI will and won&rsquo;t help, with one pilot to try first. Fixed price.</p>
-        <a href="/ai-workflow-review/" class="link" style="font-size: 14px; margin-top: 4px;">How the review works &rarr;</a>
-      </div>
-    </div>
-
-    <p class="work-subhead">Selected technical work</p>
+    <h2>Selected technical work</h2>
     <div class="card-grid">
       <div class="card">
         <div class="card-label">Contamination screening from spectra</div>
