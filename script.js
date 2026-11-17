@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var section = a.closest('section, .hero-band');
     var where = section ? (section.id || 'hero') : 'header';
     if (href.indexOf('linkedin.com/in/') !== -1) track('contact_linkedin', { location: where });
-    else if (href === '#groundwork-case-study') track('case_study_click', { location: where });
+    else if (href.indexOf('#groundwork-case-study') !== -1) track('case_study_click', { location: where });
+    else if (href.indexOf('/ai-workflow-review') === 0) track('ai_review_click', { location: where });
     else if (href.indexOf('groundworkpay.com') !== -1) track('groundwork_click', { location: where, destination: href });
     else if (href.indexOf('scholar.google.com') !== -1) track('scholar_click');
   });
