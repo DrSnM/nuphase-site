@@ -261,26 +261,11 @@ section.plain { width: 100%; padding: 64px 0; }
 .place-note { margin: 0; font-size: 13px; color: var(--muted); transition: color 0.15s; }
 .place-note.on { color: var(--red); }
 
-/* World map of places worked (line art) */
+/* Globe of places worked (line art, canvas) */
 .wmap { margin: 8px 0 4px; padding: 0; position: relative; }
-.wmap svg { display: block; width: 100%; height: auto; overflow: visible; }
-.wmap .frame { fill: none; stroke: var(--ink); stroke-width: 1.2px; vector-effect: non-scaling-stroke; opacity: 0.75; }
-.wmap .grat { fill: none; stroke: var(--ink); stroke-width: 1px; stroke-dasharray: 1 6; stroke-linecap: round; vector-effect: non-scaling-stroke; opacity: 0.35; }
-.wmap .land { fill: none; stroke: var(--ink); stroke-width: 0.9px; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; opacity: 0.62; }
-.wmap .hlc { fill: url(#wm-hatch); stroke: var(--ink); stroke-width: 1.2px; stroke-linejoin: round; vector-effect: non-scaling-stroke; transition: stroke 0.15s; }
-.wmap .hlc.on { fill: url(#wm-hatch2); stroke: var(--red); stroke-width: 1.6px; }
-.wmap .tick { font-family: var(--font-display); font-style: italic; fill: var(--muted); }
-.wmap .halo { fill: var(--paper); }
-.wmap .dot { fill: var(--ink); transition: fill 0.15s; }
-.wmap .hit { fill: transparent; cursor: pointer; }
-.wmap .ring { fill: none; stroke: var(--red); stroke-width: 1px; vector-effect: non-scaling-stroke; opacity: 0; transform-box: fill-box; transform-origin: center; }
-.wmap .loc.on .dot { fill: var(--red); }
-.wmap .loc.on .ring { opacity: 1; animation: wm-ping 1.5s ease-out infinite; }
-.wmap .lbl { font-family: var(--font-display); font-style: italic; font-weight: 500; fill: var(--ink); opacity: 0; transition: opacity 0.15s; paint-order: stroke; stroke: var(--paper); stroke-linejoin: round; pointer-events: none; }
-.wmap .loc.on .lbl, .wmap .home-lbl { opacity: 1; }
-.wmap .home-mark { fill: var(--red); stroke: var(--paper); stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
-@keyframes wm-ping { from { transform: scale(0.45); opacity: 0.95; } to { transform: scale(1.7); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .wmap .loc.on .ring { animation: none; } }
+.wmap canvas.globe { display: block; width: 100%; max-width: 640px; margin: 0 auto; cursor: grab; touch-action: pan-y; }
+.wmap canvas.globe.grabbing { cursor: grabbing; }
+.wmap-hint { margin: 0; text-align: center; font-size: 13px; color: var(--muted); }
 
 .pub-item { padding: 14px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; max-width: 720px; }
 .pub-item .pub-title { font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.5; }
