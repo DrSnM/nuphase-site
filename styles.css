@@ -131,7 +131,7 @@ h1, h2, h3 {
 .achv-count b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
 .achv-slide { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: center; min-height: 190px; padding: 14px 0 8px; transition: opacity 0.35s ease, transform 0.35s ease; }
 .achv-slide.out { opacity: 0; transform: translateY(8px); }
-.achv-fig { font-family: var(--font-display); font-weight: 500; font-size: clamp(54px, 8.6vw, 118px); letter-spacing: -0.04em; line-height: 0.95; white-space: nowrap; }
+.achv-fig { font-family: var(--font-display); font-weight: 500; font-size: clamp(54px, 6.4vw, 92px); letter-spacing: -0.04em; line-height: 0.95; white-space: nowrap; }
 .achv-text p { margin: 0; font-family: var(--font-display); font-size: clamp(20px, 2.1vw, 27px); line-height: 1.3; letter-spacing: -0.01em; }
 .achv-text small { display: block; margin-top: 12px; font-size: 14px; line-height: 1.55; color: var(--ink-soft); max-width: 46ch; }
 .achv-pips { display: flex; gap: 8px; }

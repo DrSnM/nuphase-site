@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ['2011', 'Co-founded Sensability with two University of Adelaide colleagues.', 'The patents are now licensed into Breville’s Eye Q toaster range.'],
       ['$1.3–1.8M', 'A year in turnover at Ziltek, the business I led as CEO.', 'Five full-time staff plus interns.'],
       ['2025', 'Led Ziltek through acquisition by GXLab.', 'Its customers and technology kept intact.'],
-      ['11 countries', 'Delivering, commissioning and meeting customers in person.', 'From Houston and Jakarta to Port Harcourt, Kuwait City and Stockholm.'],
+      ['11 countries', 'Outside Australia, in person: delivery, commissioning, customers, conferences and trials.', 'From Houston and Jakarta to Port Harcourt, Kuwait City and Stockholm.'],
       ['20 years', 'Between the technical work and the commercial calls on top of it.', 'Inventor, spin-out founder, licensor and executive.']
     ];
     var DWELL = 5600, idx = 0, paused = false, elapsed = 0, lastT = 0;
