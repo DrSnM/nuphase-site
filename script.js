@@ -63,18 +63,20 @@ document.addEventListener('DOMContentLoaded', function () {
   if (achv) {
     var ITEMS = [
       ['88–94%', 'Field-validated accuracy classifying petroleum contamination from infrared spectra.', 'Across three regulatory thresholds and 2,700+ lab-measured samples, for Chevron and Kuwait Oil Company.'],
-      ['15,341', 'Lab-referenced soil samples modelled nationally for soil organic carbon.', 'R² = 0.85, validated on 350+ samples never seen in training.'],
+      ['15,000+', 'Lab-referenced soil samples modelled nationally for soil organic carbon.', 'R² = 0.85, validated on 350+ samples never seen in training.'],
       ['93–94%', 'Soil texture class accuracy in the field, from a handheld infrared scan.', 'A compositional-statistics model built with a commercial soil-testing laboratory.'],
       ['2 d → 1 h', 'Calibration turnaround after the process was rebuilt.', 'A manual, judgement-heavy process became a pipeline more than 90% automated.'],
-      ['2011', 'Co-founded Sensability with two University of Adelaide colleagues.', 'The patents are now licensed into Breville’s Eye Q toaster range.'],
-      ['$1.3–1.8M', 'A year in turnover at Ziltek, the business I led as CEO.', 'Five full-time staff plus interns.'],
-      ['2025', 'Led Ziltek through acquisition by GXLab.', 'Its customers and technology kept intact.'],
-      ['11 countries', 'Outside Australia, in person: delivery, commissioning, customers, conferences and trials.', 'From Houston and Jakarta to Port Harcourt, Kuwait City and Stockholm.'],
-      ['20 years', 'Between the technical work and the commercial calls on top of it.', 'Inventor, spin-out founder, licensor and executive.']
+      ['40 d → 10 h', 'Run time for atmospheric laser-propagation simulations, after moving them onto GPUs in 2012.', 'At Defence Science and Technology Group, an early adopter of GPU computing for this kind of physics.'],
+      ['17 years', 'Applying machine learning and evolutionary optimisation to real measurement problems, from genetic-algorithm curve fitting in 2009 to classifiers in 2014.', 'One of those classifiers, identifying bread type, is part of the granted Sensability patent family.'],
+      ['15 patents', 'Granted across three families, each in Australia, the US, Europe, China and Russia.', 'Co-founded Sensability in 2011; the technology now ships in Breville’s Eye Q toaster range.'],
+      ['356 citations', 'Published across photonic materials, free-space laser communications and soil spectroscopy.', 'Fifteen peer-reviewed papers, from specialist optical glasses to national-scale soil carbon models.'],
+      ['$4.3M', 'National soil carbon program, with Ziltek as the measurement partner.', 'A consortium with the University of Queensland, the University of Aberdeen, FarmLab and AgriCircle.'],
+      ['~$1M', 'Returned to shareholders when I was instructed to close Ziltek and negotiated its sale instead.', 'The technology, customers and CSIRO licence stayed intact under GXLab.'],
+      ['11 countries', 'Outside Australia, in person: delivery, commissioning, customers, conferences and trials.', 'From Houston and Jakarta to Port Harcourt, Kuwait City and Stockholm.']
     ];
     var DWELL = 5600, idx = 0, paused = false, elapsed = 0, lastT = 0;
     var el = function (id) { return document.getElementById(id); };
-    var slide = el('slide'), pips = el('pips'), bar = el('bar');
+    var slide = el('slide'), pips = el('pips');
     el('ac-n').textContent = String(ITEMS.length).padStart(2, '0');
     ITEMS.forEach(function (it, k) {
       var b = document.createElement('button');
@@ -92,13 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
       idx = (k + ITEMS.length) % ITEMS.length; elapsed = 0;
       if (reduceMotion) { paint(idx); return; }
       slide.classList.add('out');
-      setTimeout(function () { paint(idx); slide.classList.remove('out'); }, 300);
+      setTimeout(function () { paint(idx); slide.classList.remove('out'); }, 320);
     };
     var tick = function (ts) {
       if (!lastT) lastT = ts;
       var dt = ts - lastT; lastT = ts;
       if (!paused && !reduceMotion && !document.hidden) { elapsed += dt; if (elapsed >= DWELL) go(idx + 1); }
-      bar.style.width = (reduceMotion ? 0 : Math.min(100, elapsed / DWELL * 100)) + '%';
       requestAnimationFrame(tick);
     };
     achv.addEventListener('mouseenter', function () { paused = true; });

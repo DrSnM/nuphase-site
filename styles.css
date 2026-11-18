@@ -129,18 +129,23 @@ h1, h2, h3 {
 .achv-top { display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
 .achv-k { color: var(--red); font-weight: 600; }
 .achv-count b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
-.achv-slide { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: center; min-height: 190px; padding: 14px 0 8px; transition: opacity 0.35s ease, transform 0.35s ease; }
-.achv-slide.out { opacity: 0; transform: translateY(8px); }
+.achv-slide { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: center; min-height: 190px; padding: 14px 0 8px; }
+/* Each piece settles into place a beat after the one before it: figure, then the line, then the detail. */
+.achv-fig, .achv-text p, .achv-text small { transition: opacity 0.7s cubic-bezier(.22,.61,.36,1), transform 0.9s cubic-bezier(.22,.61,.36,1); }
+.achv-text p { transition-delay: 0.12s; }
+.achv-text small { transition-delay: 0.26s; }
+.achv-slide.out .achv-fig, .achv-slide.out .achv-text p, .achv-slide.out .achv-text small { opacity: 0; transition-duration: 0.28s; transition-delay: 0s; }
+.achv-slide.out .achv-fig { transform: translateY(10px); }
+.achv-slide.out .achv-text p { transform: translateY(8px); }
+.achv-slide.out .achv-text small { transform: translateY(6px); }
 .achv-fig { font-family: var(--font-display); font-weight: 500; font-size: clamp(54px, 6.4vw, 92px); letter-spacing: -0.04em; line-height: 0.95; white-space: nowrap; }
 .achv-text p { margin: 0; font-family: var(--font-display); font-size: clamp(20px, 2.1vw, 27px); line-height: 1.3; letter-spacing: -0.01em; }
 .achv-text small { display: block; margin-top: 12px; font-size: 14px; line-height: 1.55; color: var(--ink-soft); max-width: 46ch; }
 .achv-pips { display: flex; gap: 8px; }
 .achv-pips button { flex: 1; height: 26px; padding: 0; background: none; border: none; cursor: pointer; position: relative; }
-.achv-pips button::after { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: var(--line); transition: background 0.2s; }
+.achv-pips button::after { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: var(--line); transition: background 0.5s ease, top 0.5s ease, height 0.5s ease; }
 .achv-pips button:hover::after { background: var(--ink-soft); }
 .achv-pips button[aria-current="true"]::after { background: var(--ink); height: 3px; top: 10px; }
-.achv-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; }
-.achv-bar i { display: block; height: 100%; width: 0; background: var(--red); }
 
 /* Ways to work together: an editorial index */
 .index { padding: 84px 0 56px; }
