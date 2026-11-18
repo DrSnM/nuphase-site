@@ -16,7 +16,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Fetch counts from OpenAlex
+      - name: Fetch counts from Google Scholar
+        # Google often blocks cloud servers; if so this step fails harmlessly and the
+        # site keeps its last numbers (the page shows when they were last updated).
+        continue-on-error: true
         run: python scripts/update_citations.py
       - name: Commit if changed
         run: |

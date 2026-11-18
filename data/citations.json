@@ -1,21 +1,20 @@
 {
-  "source": "OpenAlex",
-  "total": 310,
+  "source": "Google Scholar",
+  "total": 365,
   "updated": "2026-11-18",
   "works": {
-    "a study of tellurite glasses for electro optic optical fibre devices": 25,
-    "development and characterisation of fpga modems using forward error correction for fsoc": 6,
-    "development and implementation of a robust angle of arrival turbulence measurement system": 12,
-    "eye safe solid state lasers for remote sensing and coherent laser radar": 1,
-    "improved maker fringes data analysis using genetic algorithms": 1,
-    "lead silicate microstructured optical fibres for electro optical applications": 11,
-    "long range modulating retroreflector communications": 2,
-    "luminescence from bismuth germanate glasses and its manipulation through oxidants": 47,
-    "mid infrared spectroscopy for soil organic carbon estimation part i global review and meta analysis": 7,
-    "mid infrared spectroscopy for soil organic carbon estimation part ii evaluating preprocessing at global and national scales": 6,
-    "on the application of genetic algorithms to maker fringes analysis": 0,
-    "preliminary results in innovative solutions for soil carbon estimation integrating remote sensing machine learning and proximal sensing spectroscopy": 42,
-    "tellurite glasses for photonic devices with enhanced nonlinearity": 1,
-    "ternary tellurite glasses for the fabrication of nonlinear optical fibres": 149
+    "a study of tellurite glasses for electro optic optical fibre devices": 26,
+    "demonstration of asymmetric lasercomm with forward error correction": 2,
+    "development and characterisation of fpga modems using forward error correction for fsoc": 4,
+    "development and implementation of a robust angle of arrival turbulence measurement system": 19,
+    "device and a method for characterising a chromatic property of foodstuff": 8,
+    "lead silicate microstructured optical fibres for electro optical applications": 14,
+    "long range modulating retroreflector communications": 3,
+    "luminescence from bismuth germanate glasses and its manipulation through oxidants": 67,
+    "method and an apparatus for identifying a content property of foodstuff": 3,
+    "mid infrared spectroscopy for soil organic carbon estimation part i global review and meta analysis": 8,
+    "mid infrared spectroscopy for soil organic carbon estimation part ii evaluating preprocessing at global and national scales": 5,
+    "preliminary results in innovative solutions for soil carbon estimation integrating remote sensing machine learning and proximal sensing spectroscopy": 41,
+    "ternary tellurite glasses for the fabrication of nonlinear optical fibres": 165
   }
 }
