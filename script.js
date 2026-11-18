@@ -69,11 +69,27 @@ document.addEventListener('DOMContentLoaded', function () {
       ['40 d → 10 h', 'Run time for atmospheric laser-propagation simulations, after moving them onto GPUs in 2012.', 'At Defence Science and Technology Group, an early adopter of GPU computing for this kind of physics.'],
       ['10+ years', 'Building machine learning and evolutionary optimisation into real measurement systems, well before it was routine in research.', 'One of those classifiers, identifying bread type, is part of the granted Sensability patent family.'],
       ['15 patents', 'Granted across three families, each in Australia, the US, Europe, China and Russia.', 'Co-founded Sensability in 2011; the technology now ships in Breville’s Eye Q toaster range.'],
-      ['356 citations', 'Published across photonic materials, free-space laser communications and soil spectroscopy.', 'Fifteen peer-reviewed papers, from specialist optical glasses to national-scale soil carbon models.'],
+      ['310 citations', 'Published across photonic materials, free-space laser communications and soil spectroscopy.', 'Fifteen peer-reviewed papers, from specialist optical glasses to national-scale soil carbon models.'],
       ['$4.3M', 'National soil carbon program, with Ziltek as the measurement partner.', 'A consortium with the University of Queensland, the University of Aberdeen, FarmLab and AgriCircle.'],
       ['~$1M', 'Returned to shareholders when I was instructed to close Ziltek and negotiated its sale instead.', 'The technology, customers and CSIRO licence stayed intact under GXLab.'],
       ['11 countries', 'Outside Australia, in person: delivery, commissioning, customers, conferences and trials.', 'From Houston and Jakarta to Port Harcourt, Kuwait City and Stockholm.']
     ];
+    // Citation counts are refreshed daily into data/citations.json (OpenAlex) by a GitHub Action.
+    // The page ships with the last committed numbers, so this only brings it up to date.
+    if (window.fetch) {
+      fetch('data/citations.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
+        if (!c || typeof c.total !== 'number') return;
+        Array.prototype.forEach.call(document.querySelectorAll('[data-cite]'), function (n) {
+          var v = c.works[n.getAttribute('data-cite')];
+          if (typeof v === 'number') n.innerHTML = ' &middot; ' + v + ' citations';
+        });
+        var t = document.getElementById('cite-total'); if (t) t.textContent = c.total;
+        var d = document.getElementById('cite-date');
+        if (d && c.updated) { var dt = new Date(c.updated + 'T00:00:00'); if (!isNaN(dt)) d.textContent = dt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' }); }
+        ITEMS.forEach(function (it) { if (/ citations$/.test(it[0])) it[0] = c.total + ' citations'; });
+        paint(idx);
+      }).catch(function () {});
+    }
     var DWELL = 5600, idx = 0, paused = false, elapsed = 0, lastT = 0;
     var el = function (id) { return document.getElementById(id); };
     var slide = el('slide'), pips = el('pips');
