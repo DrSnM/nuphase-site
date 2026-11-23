@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ['15 patents', 'Granted across three families, each in Australia, the US, Europe, China and Russia.', 'Co-founded Sensability in 2011; the technology now ships in Breville’s Eye Q toaster range.'],
       ['365 citations', 'Published across photonic materials, free-space laser communications and soil spectroscopy.', 'Fifteen peer-reviewed papers, from specialist optical glasses to national-scale soil carbon models.'],
       ['$4.3M', 'National soil carbon program, with Ziltek as the measurement partner.', 'A consortium with the University of Queensland, the University of Aberdeen, FarmLab and AgriCircle.'],
-      ['~$1M', 'Returned to shareholders when I was instructed to close Ziltek and negotiated its sale instead.', 'The technology, customers and CSIRO licence stayed intact under GXLab.'],
+      ['~$750k', 'Realised when I was instructed to close Ziltek and negotiated its sale instead.', 'The technology, customers and CSIRO licence stayed intact under GXLab.'],
       ['11 countries', 'Outside Australia, in person: delivery, commissioning, customers, conferences and trials.', 'From Houston and Jakarta to Port Harcourt, Kuwait City and Stockholm.']
     ];
     // Citation counts are refreshed daily into data/citations.json (Google Scholar) by a GitHub Action.
